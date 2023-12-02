@@ -1,0 +1,96 @@
+.imageContainer{
+    width:350px;
+    height: 250px;
+    border:1px solid white;
+    background: url('./images/photo.jpg');
+    background-size: 100% 100%;
+    background-repeat: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s linear all;
+    background-position: 50% 50%;
+}
+
+.cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.2s linear all;
+}
+
+.cover div p {
+    white-space: pre-line;
+    text-align: right;
+    border-right: 5px solid white;
+    padding-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    opacity: 0;
+    transform: 0.2s linear all;
+}
+
+.cover div{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.imageContainer:hover .cover{
+    background: rgba(1, 56, 82, 0.8);
+}
+
+.imageContainer:hover{
+    background-size: 105% 105%;    
+}
+
+
+.imageContainer:hover .cover div p{
+    opacity: 1;
+}
+
+
+.cover::before{
+    position: absolute;
+    top: 0;
+    left: -25%;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    content: '';
+    transition: 0.3s linear all;
+}
+.cover::after{
+    position: absolute;
+    top: 0;
+    right: -25%;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.6);
+    content: '';
+    transition: 0.3s linear all;
+}
+
+.imageContainer:hover .cover::before{
+    transform: translateX(500px);
+}
+.imageContainer:hover .cover::after{
+    transform: translateX(-500px);
+}
+
+
+h1{
+    font-weight: 100;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+h1 span{
+    font-weight: bold;
+}
