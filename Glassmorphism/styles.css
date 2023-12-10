@@ -1,0 +1,98 @@
+.container{
+    width: 450px;
+    text-align: center;
+    position: relative;
+}
+.box{
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow:1px 1px 100px #265073;
+    position:relative;
+}
+
+.loginbox{
+    z-index: 1;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    padding: 20px;
+    display: block;
+    margin: 30px 0;
+    width: calc(100% - 40px);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color:transparent;
+    color:white;
+    border-radius:40px;
+    box-shadow:1px 1px 50px #265073;
+    letter-spacing: 1px;
+}
+
+input::placeholder{
+    color:white;
+}
+
+.link{
+    display: block;
+    margin: 20px;
+    font-size: 18px;
+}
+
+button{
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 24px;
+    border: none;
+    outline:none;
+    background:#2D9596;
+    color: white;
+    width: 100%;
+    box-shadow:1px 1px 50px #265073;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+
+.boxanimate{
+    position: absolute;
+    animation: hover 5s infinite linear;
+}
+
+.box.boxanimate:nth-child(3){
+    top:-50px;
+    left:-50px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    animation-delay: 1s;
+}
+
+.box.boxanimate:nth-child(2){
+    top:150px;
+    right:-80px;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+}
+
+.box.boxanimate:nth-child(4){
+    bottom:-20px;
+    left:-40px;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    animation-delay: 2s;
+}
+
+
+@keyframes hover {
+    50%{
+        transform:translateY(-10px);
+    }
+}
